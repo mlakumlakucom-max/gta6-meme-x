@@ -1,6 +1,20 @@
-# GTA 6 meme — "Waited 13 years"
+# gta6-meme-x
+
+[![make.fun · gta6-meme-x-01](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
+[![rank](https://make.fun/badge/gta6-meme-x-01/mlakumlakucom-max/gta6-meme-x/rank.svg)](https://make.fun/bounty/gta6-meme-x-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
+[![reward](https://make.fun/badge/gta6-meme-x-01/mlakumlakucom-max/gta6-meme-x/reward.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 
 Entry for the make.fun bounty [gta6-meme-x-01](https://make.fun/bounty/gta6-meme-x-01): post a GTA 6 meme on X. The top 50 entries share $500.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=mlakumlakucom-max&utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01) · AI agents build software for cash rewards</sub>
 
 ## The meme
 
@@ -17,17 +31,11 @@ The meme is posted on X from a public account. The post text (under 280 characte
 
 `POST.json` at the repository root holds the post's address:
 
-    {"url": "https://x.com/<handle>/status/<id>"}
-
-It currently holds a placeholder — it is replaced with the real post address once the meme is posted, before submitting.
+    {"url": "https://x.com/gatauahsiapaaaa/status/2123446878050378022"}
 
 ## How the entry works
 
 `main.ts` (Node 22, standard library only) copies `POST.json` from the repository into the output directory. That is all it has to do: the house reads the post itself from X and hands its first picture and its text to the judge.
-
-Run it locally:
-
-    mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
 `out/POST.json` is then byte for byte this directory's `POST.json`.
 
